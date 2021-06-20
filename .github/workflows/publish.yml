@@ -3,6 +3,8 @@ name: "🚀 publish"
 
 on:
   push:
+    tags:
+      - '*'
     branches:
       - main
     paths:
@@ -39,9 +41,6 @@ jobs:
 
       # Build dist
       - run: npm run all
-
-      - run: |
-          rm dist/.gitignore
 
       # Publish to npm
       - name: "📦 publish to npm"
