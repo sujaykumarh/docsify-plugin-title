@@ -1,0 +1,42 @@
+# Publish resources
+name: "🚀 publish"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'src'
+
+jobs:
+
+  # Generate dist
+  dist:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Pull Source Code
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+
+      # Use nodejs
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      # Install npm packages
+      - run: npm install
+
+      # Build dist
+      - run: npm run all
+
+      # Publish to npm
+      - name: "📦 publish to npm"
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          dry-run: true
+          token: ${{ secrets.NPM_TOKEN }}

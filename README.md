@@ -1,12 +1,75 @@
 # Docsify Plugin Title
 
-A simple plugin to set custom text before title
+A simple plugin to set custom docsify title
 
 <br>
 
-# 🛠️ Usage
+# 📥 Download
 
+- Locally
+
+    ```bash
+    npm install @sujaykumarh/docsify-plugin-title
+    ```
+- CDN
+
+    ```html
+    <script src="https://cdn/url/plugin.js"></script>
+    ```
+
+<br>
+
+# 🧰 Configuration
+
+Available options
+
+```js
+window.$docsify.customPageTitle = {
+    prefix:     false,      // [optional] title prefix. defalt: false eg: prefix: "Application"
+    suffix:     false,      // [optional] title suffix. defalt: false eg: suffix: "v1.0.0"
+    seprator:   '|',        // [optional] seprator for title eg: title->   prefix | title | suffix
+	debug:		false,      // [optional] should debug
+}
 ```
+
+Example:
+
+```html
+<script>
+    ...
+
+    window.$docsify.customPageTitle = {
+        prefix:     'Docsify',     // title prefix.
+        suffix:     'v1.0.0',      // title suffix.
+    }
+
+    ...
+</script>
+```
+
+<br>
+
+# 🛠️ Development
+
+Clone
+
+```bash
+git clone https://github.com/Sujaykumarh/docsify-docker-example.git
+```
+
+install resources
+
+```bash
+npm install
+```
+
+Generate files in `dist` folder
+```bash
+npm run all     # generate all
+
+npm run dist    # generate just .js in dist
+
+npm run minify  # generate minified .min.js in dist
 ```
 
 <br>

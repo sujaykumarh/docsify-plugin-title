@@ -86,5 +86,6 @@ Temporary Items
 !.gitkeep
 .env
 
-## Optional Docker compose yml
-#docker-compose.yml
+## npm
+node_modules
+npm-debug.log

@@ -1,9 +1,12 @@
 {
-  "name": "docsify-plugin-title",
-  "version": "0.0.1",
+  "name": "@sujaykumarh/docsify-plugin-title",
+  "version": "1.0.0",
   "description": "Docsify plugin custom page title",
-  "main": "dist/docsify-plugin-title.js",
+  "main": "src/plugin.js",
   "scripts": {
+    "all": "npm run dist ; npm run minify",
+    "dist": "terser --comments all src/plugin.js -o dist/plugin.js",
+    "minify": "terser src/plugin.js -o dist/plugin.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,12 +15,17 @@
   },
   "keywords": [
     "docsify",
-    "docsify-plugin"
+    "docsify-plugin",
+    "plugin",
+    "custom-title"
   ],
   "author": "Sujaykumar Hublikar <hello@sujaykumarh.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Sujaykumarh/docsify-plugin-title/issues"
   },
-  "homepage": "https://github.com/Sujaykumarh/docsify-plugin-title#readme"
+  "homepage": "https://github.com/Sujaykumarh/docsify-plugin-title#readme",
+  "dependencies": {
+    "terser": "^5.7.0"
+  }
 }
