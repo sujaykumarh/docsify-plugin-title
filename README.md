@@ -14,7 +14,7 @@ A simple plugin to set custom docsify title
 - CDN
 
     ```html
-    <script src="https://cdn/url/plugin.js"></script>
+    <script src="://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
     ```
 
 <br>
@@ -28,7 +28,7 @@ window.$docsify.customPageTitle = {
     prefix:     false,      // [optional] title prefix. defalt: false eg: prefix: "Application"
     suffix:     false,      // [optional] title suffix. defalt: false eg: suffix: "v1.0.0"
     seprator:   '|',        // [optional] seprator for title eg: title->   prefix | title | suffix
-	debug:		false,      // [optional] should debug
+    debug:	false,      // [optional] should debug
 }
 ```
 
