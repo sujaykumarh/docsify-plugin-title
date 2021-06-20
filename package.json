@@ -1,0 +1,23 @@
+{
+  "name": "docsify-plugin-title",
+  "version": "0.0.1",
+  "description": "Docsify plugin custom page title",
+  "main": "dist/docsify-plugin-title.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujaykumarh/docsify-plugin-title.git"
+  },
+  "keywords": [
+    "docsify",
+    "docsify-plugin"
+  ],
+  "author": "Sujaykumar Hublikar <hello@sujaykumarh.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Sujaykumarh/docsify-plugin-title/issues"
+  },
+  "homepage": "https://github.com/Sujaykumarh/docsify-plugin-title#readme"
+}
