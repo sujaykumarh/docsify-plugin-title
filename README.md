@@ -2,6 +2,9 @@
 
 A simple plugin to set custom docsify title
 
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-title/%F0%9F%9A%80%20publish)](https://github.com/Sujaykumarh/docsify-plugin-title/actions)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/sujaykumarh/docsify-plugin-title)](https://www.npmjs.com/package/@sujaykumarh/docsify-plugin-title)
+[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/@sujaykumarh/docsify-plugin-title)](https://www.jsdelivr.com/package/npm/@sujaykumarh/docsify-plugin-title)
 <br>
 
 # 📥 Download
@@ -28,7 +31,7 @@ window.$docsify.customPageTitle = {
     prefix:     false,      // [optional] title prefix. defalt: false eg: prefix: "Application"
     suffix:     false,      // [optional] title suffix. defalt: false eg: suffix: "v1.0.0"
     seprator:   '|',        // [optional] seprator for title eg: title->   prefix | title | suffix
-    debug:	false,      // [optional] should debug
+    debug:      false,      // [optional] should debug
 }
 ```
 
