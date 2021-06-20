@@ -10,6 +10,14 @@
 // javascript policy
 'use strict';
 
+const customPageTitleOptions = {
+    prefix:     '',
+    addPrefix:  false,
+    suffix:     '',
+    addSuffix:  false,
+    seprator:   '|',
+	debug:		false,
+}
 
 // main function
 function customPageTitle( hook, vm ) {
@@ -27,7 +35,7 @@ function customPageTitle( hook, vm ) {
 
 // find heading plugin options
 window.$docsify.customPageTitle = Object.assign(
-	autoHeaderOptions,
+	customPageTitleOptions,
 	window.$docsify.customPageTitle
 );
 window.$docsify.plugins = [].concat(
