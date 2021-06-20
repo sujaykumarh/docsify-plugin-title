@@ -10,6 +10,12 @@ on:
       - 'package-lock.json'
       - 'src'
 
+  workflow_dispatch:
+    inputs:
+      relVersion:
+        description: 'Version'
+        required: true
+
 jobs:
 
   # Generate dist
@@ -36,6 +42,8 @@ jobs:
 
       - run: |
           rm dist/.gitignore
+
+      - run: echo "relVersion ${{ github.event.inputs.relVersion }}"
 
       # Publish to npm
       - name: "📦 publish to npm"
