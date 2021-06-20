@@ -10,11 +10,11 @@ on:
       - 'package-lock.json'
       - 'src'
 
-  workflow_dispatch:
-    inputs:
-      relVersion:
-        description: 'Version'
-        required: true
+  # workflow_dispatch:
+  #   inputs:
+  #     relVersion:
+  #       description: 'Version'
+  #       required: true
 
 jobs:
 
@@ -43,11 +43,8 @@ jobs:
       - run: |
           rm dist/.gitignore
 
-      - run: echo "relVersion ${{ github.event.inputs.relVersion }}"
-
       # Publish to npm
       - name: "📦 publish to npm"
         uses: JS-DevTools/npm-publish@v1
         with:
-          dry-run: true
           token: ${{ secrets.NPM_TOKEN }}
