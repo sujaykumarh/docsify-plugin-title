@@ -17,7 +17,7 @@ A simple plugin to set custom docsify title
 - CDN
 
     ```html
-    <script src="://cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
     ```
 
 <br>
