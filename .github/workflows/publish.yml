@@ -34,6 +34,9 @@ jobs:
       # Build dist
       - run: npm run all
 
+      - run: |
+          rm dist/.gitignore
+
       # Publish to npm
       - name: "📦 publish to npm"
         uses: JS-DevTools/npm-publish@v1
