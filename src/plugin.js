@@ -1,5 +1,5 @@
 /*
- * docsify-plugin-title/plugin.js v1.0.8
+ * docsify-plugin-title/plugin.js v1.0.9
  * (https://github.com/Sujaykumarh/docsify-plugin-title/)
  *
  * Copyright (c) 2021 Sujaykumar.Hublikar <hello@sujaykumarh.com>
