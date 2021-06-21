@@ -3,20 +3,14 @@ name: "🚀 publish"
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     tags:
-      - "*"
+      - "v*"
     paths:
       - 'package.json'
       - 'package-lock.json'
       - 'src'
-
-  # workflow_dispatch:
-  #   inputs:
-  #     relVersion:
-  #       description: 'Version'
-  #       required: true
 
 jobs:
 
@@ -40,7 +34,27 @@ jobs:
       - run: npm install
 
       # Build dist
+      - run: mkdir dist
       - run: npm run all
+
+      # publish release
+      - run: echo ${{ github.sha }} >> Release.txt
+      - run: mv LICENSE LICENSE.txt
+      - name: "📦 Github Release"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          automatic_release_tag: "latest"
+          prerelease: false
+          files: |
+            src/*.js
+            dist/*.js
+            package.json
+            Release.txt
+            LICENSE.txt
+            README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Publish to npm
       - name: "📦 publish to npm"
