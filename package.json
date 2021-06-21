@@ -1,6 +1,6 @@
 {
   "name": "@sujaykumarh/docsify-plugin-title",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Docsify plugin custom page title",
   "main": "src/plugin.js",
   "scripts": {
