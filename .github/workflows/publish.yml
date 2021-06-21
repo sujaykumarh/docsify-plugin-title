@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - main
+    tags:
+      - "*"
     paths:
       - 'package.json'
       - 'package-lock.json'
@@ -32,7 +34,7 @@ jobs:
       # Use nodejs
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: '16.x'
 
       # Install npm packages
       - run: npm install
@@ -46,3 +48,13 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"
+          check-version: true
+
+      # Publish to github npm
+      - name: "📦 publish to github npm"
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          access: "public"
+          registry: "https://npm.pkg.github.com"
+          check-version: true
