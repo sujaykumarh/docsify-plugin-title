@@ -28,8 +28,8 @@ Available options
 
 ```js
 window.$docsify.customPageTitle = {
-    prefix:     false,      // [optional] title prefix. defalut: false eg: prefix: "Application"
-    suffix:     false,      // [optional] title suffix. defalut: false eg: suffix: "v1.0.0"
+    prefix:     false,      // [optional] title prefix. default: false eg: prefix: "Application"
+    suffix:     false,      // [optional] title suffix. default: false eg: suffix: "v1.0.0"
     seprator:   '|',        // [optional] seprator for title eg: title->   prefix | title | suffix
     debug:      false,      // [optional] should debug
 }
@@ -66,7 +66,8 @@ install resources
 npm install
 ```
 
-Generate files in `dist` folder
+minify `src/plugin.js` using [terser](https://github.com/terser/terser) and generate files in `dist` folder
+
 ```bash
 npm run all     # generate all
 
