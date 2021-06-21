@@ -40,6 +40,7 @@ jobs:
       - run: rm -rf dist/.git* # delete .git* files
       - run: echo ${{ env.RELEASE_VERSION }} >> Release.txt
       - run: mv LICENSE LICENSE.txt
+      - run: sed -i -e 's/REL_VER_NUMBER/${{ env.RELEASE_VERSION }}/g' src/plugin.js
 
       # Build dist
       - run: npm run all
