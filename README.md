@@ -28,8 +28,8 @@ Available options
 
 ```js
 window.$docsify.customPageTitle = {
-    prefix:     false,      // [optional] title prefix. defalt: false eg: prefix: "Application"
-    suffix:     false,      // [optional] title suffix. defalt: false eg: suffix: "v1.0.0"
+    prefix:     false,      // [optional] title prefix. defalut: false eg: prefix: "Application"
+    suffix:     false,      // [optional] title suffix. defalut: false eg: suffix: "v1.0.0"
     seprator:   '|',        // [optional] seprator for title eg: title->   prefix | title | suffix
     debug:      false,      // [optional] should debug
 }
