@@ -34,7 +34,7 @@ jobs:
       - run: npm install
 
       # Build dist
-      - run: mkdir dist
+      - run: rm -rf dist/.git* # delete .git* files
       - run: npm run all
 
       # publish release
