@@ -1,6 +1,6 @@
 # Docsify Plugin Title
 
-A simple plugin to set custom docsify title
+A simple plugin to customize [docsify](https://github.com/docsifyjs/docsify/) page title
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-title/%F0%9F%9A%80%20publish)](https://github.com/Sujaykumarh/docsify-plugin-title/actions)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sujaykumarh/docsify-plugin-title)](https://www.npmjs.com/package/@sujaykumarh/docsify-plugin-title)
