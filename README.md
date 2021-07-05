@@ -2,7 +2,7 @@
 
 A simple plugin to customize [docsify](https://github.com/docsifyjs/docsify/) page title
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-title/%F0%9F%9A%80%20publish)](https://github.com/Sujaykumarh/docsify-plugin-title/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-title/Build%20&%20Publish%20package)](https://github.com/Sujaykumarh/docsify-plugin-title/actions)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/sujaykumarh/docsify-plugin-title)](https://www.npmjs.com/package/@sujaykumarh/docsify-plugin-title)
 [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/@sujaykumarh/docsify-plugin-title)](https://www.jsdelivr.com/package/npm/@sujaykumarh/docsify-plugin-title)
 <br>
@@ -57,7 +57,7 @@ Example:
 Clone
 
 ```bash
-git clone https://github.com/Sujaykumarh/docsify-docker-example.git
+git clone https://github.com/Sujaykumarh/docsify-plugin-title.git
 ```
 
 install resources
@@ -66,13 +66,9 @@ install resources
 npm install
 ```
 
-minify `src/plugin.js` using [terser](https://github.com/terser/terser) and generate files in `dist` folder
+minify `src/plugin.js` to generate minified files in `dist` folder
 
 ```bash
-npm run all     # generate all
-
-npm run dist    # generate just .js in dist
-
 npm run minify  # generate minified .min.js in dist
 ```
 
