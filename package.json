@@ -4,8 +4,6 @@
   "description": "Docsify plugin custom page title",
   "main": "src/plugin.js",
   "scripts": {
-    "all": "npm run dist ; npm run minify",
-    "dist": "terser --comments all src/plugin.js -o dist/plugin.js",
     "minify": "terser src/plugin.js -o dist/plugin.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +14,7 @@
   "keywords": [
     "docsify",
     "docsify-plugin",
+    "docsify-plugin-title",
     "plugin",
     "custom-title"
   ],
@@ -25,7 +24,7 @@
     "url": "https://github.com/Sujaykumarh/docsify-plugin-title/issues"
   },
   "homepage": "https://github.com/Sujaykumarh/docsify-plugin-title#readme",
-  "dependencies": {
-    "terser": "^5.7.0"
+  "devDependencies": {
+    "terser": "^5.7.1"
   }
 }
