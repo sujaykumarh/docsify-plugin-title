@@ -1,11 +1,12 @@
-/*
+/**
+ * @license
+ *
  * docsify-plugin-title/plugin.js REL_VER_NUMBER
  * (https://github.com/Sujaykumarh/docsify-plugin-title/)
  *
  * Copyright (c) 2021 Sujaykumar.Hublikar <hello@sujaykumarh.com>
  * Github (@sujaykumarh)
  *
- * @license
  * Licensed under Apache License, Version 2.0
  */
 
@@ -49,15 +50,11 @@ function customPageTitle( hook, vm ) {
 }
 
 function debug(msg){
-    if(customPageTitleOptions.debug){
-        console.log(msg);
-    }
+    if(customPageFooterOptions.debug) console.log(msg);
 }
 
 function error(msg){
-    if(customPageTitleOptions.debug){
-        console.error(msg);
-    }
+    if(customPageFooterOptions.debug) console.error(msg);
 }
 
 
