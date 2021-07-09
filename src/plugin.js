@@ -50,11 +50,11 @@ function customPageTitle( hook, vm ) {
 }
 
 function debug(msg){
-    if(customPageFooterOptions.debug) console.log(msg);
+    if(customPageTitleOptions.debug) console.log(msg);
 }
 
 function error(msg){
-    if(customPageFooterOptions.debug) console.error(msg);
+    if(customPageTitleOptions.debug) console.error(msg);
 }
 
 
