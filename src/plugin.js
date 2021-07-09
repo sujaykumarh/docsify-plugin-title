@@ -16,31 +16,31 @@
 
 // config options
 const customPageTitleOptions = {
-    prefix:     false,
-    suffix:     false,
-    seprator:   '|',
-	debug:		false,
+    prefix: false,
+    suffix: false,
+    seprator: '|',
+    debug: false,
 }
 
 // main function
-function customPageTitle( hook, vm ) {
+function customPageTitle(hook, vm) {
 
-	// before hook
-	hook.beforeEach( function( content ) {
-    });
+    // before hook
+    // hook.beforeEach(function (content) {
+    // });
 
     // after hook
-	hook.doneEach( function() {
-        var _title  = document.title;   // title from docsify
+    hook.doneEach(function () {
+        var _title = document.title;   // title from docsify
 
         debug('customPageTitleOptions: ' + customPageTitleOptions);
         debug('page title [before]: ' + document.title);
-        if(customPageTitleOptions.prefix != '' || customPageTitleOptions.prefix != false){
+        if (customPageTitleOptions.prefix != '' || customPageTitleOptions.prefix != false) {
             _title = customPageTitleOptions.prefix + " " + customPageTitleOptions.seprator + " " + _title;
             debug('new title [prefix]:' + _title);
         }
 
-        if(customPageTitleOptions.suffix != '' || customPageTitleOptions.suffix != false){
+        if (customPageTitleOptions.suffix != '' || customPageTitleOptions.suffix != false) {
             _title = _title + " " + customPageTitleOptions.seprator + " " + customPageTitleOptions.suffix;
             debug('new title [suffix]:' + _title);
         }
@@ -49,23 +49,23 @@ function customPageTitle( hook, vm ) {
     });
 }
 
-function debug(msg){
-    if(customPageTitleOptions.debug) console.log(msg);
+function debug(msg) {
+    if (customPageTitleOptions.debug) console.log('[customPageTitle] log: ' + msg);
 }
 
-function error(msg){
-    if(customPageTitleOptions.debug) console.error(msg);
+function error(msg) {
+    if (customPageTitleOptions.debug) console.error('[customPageTitle] err: ' + msg);
 }
 
 
 // find customPageTitle plugin options
 window.$docsify.customPageTitle = Object.assign(
-	customPageTitleOptions,
-	window.$docsify.customPageTitle
+    customPageTitleOptions,
+    window.$docsify.customPageTitle
 );
 
 // Set docsify plugin
 window.$docsify.plugins = [].concat(
-	customPageTitle,
-	window.$docsify.plugins
+    customPageTitle,
+    window.$docsify.plugins
 );
