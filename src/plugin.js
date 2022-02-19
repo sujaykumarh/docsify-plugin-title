@@ -35,6 +35,10 @@ function customPageTitle(hook, vm) {
 
         debug('customPageTitleOptions: ' + customPageTitleOptions);
         debug('page title [before]: ' + document.title);
+        if (!_title) {
+            customPageTitleOptions.seprator = false;
+        }
+
         if (customPageTitleOptions.prefix != '' || customPageTitleOptions.prefix != false) {
             _title = customPageTitleOptions.prefix + " " + customPageTitleOptions.seprator + " " + _title;
             debug('new title [prefix]:' + _title);
