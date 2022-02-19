@@ -35,7 +35,7 @@ function customPageTitle(hook, vm) {
 
         debug('customPageTitleOptions: ' + customPageTitleOptions);
         debug('page title [before]: ' + document.title);
-        if (!_title) {
+        if (_title == '') {
             customPageTitleOptions.seprator = false;
         }
 
