@@ -16,6 +16,7 @@
 
 // config options
 const customPageTitleOptions = {
+    index: 'Docsify',
     prefix: false,
     suffix: false,
     seprator: '|',
@@ -39,14 +40,16 @@ function customPageTitle(hook, vm) {
             customPageTitleOptions.seprator = '';
         }
 
-        if (customPageTitleOptions.prefix != '' || customPageTitleOptions.prefix != false) {
-            _title = customPageTitleOptions.prefix + " " + customPageTitleOptions.seprator + " " + _title;
-            debug('new title [prefix]:' + _title);
-        }
+        if (_index != customPageTitleOptions.index) {
+            if (customPageTitleOptions.prefix != '' || customPageTitleOptions.prefix != false) {
+                _title = customPageTitleOptions.prefix + " " + customPageTitleOptions.seprator + " " + _title;
+                debug('new title [prefix]:' + _title);
+            }
 
-        if (customPageTitleOptions.suffix != '' || customPageTitleOptions.suffix != false) {
-            _title = _title + " " + customPageTitleOptions.seprator + " " + customPageTitleOptions.suffix;
-            debug('new title [suffix]:' + _title);
+            if (customPageTitleOptions.suffix != '' || customPageTitleOptions.suffix != false) {
+                _title = _title + " " + customPageTitleOptions.seprator + " " + customPageTitleOptions.suffix;
+                debug('new title [suffix]:' + _title);
+            }
         }
 
         document.title = _title;
