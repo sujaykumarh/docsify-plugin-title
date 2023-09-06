@@ -18,7 +18,7 @@
 const customPageTitleOptions = {
     prefix: false,
     suffix: false,
-    seprator: '|',
+    separator: '|',
     debug: false,
 }
 
@@ -36,12 +36,12 @@ function customPageTitle(hook, vm) {
         debug('customPageTitleOptions: ' + customPageTitleOptions);
         debug('page title [before]: ' + document.title);
         if (customPageTitleOptions.prefix != '' || customPageTitleOptions.prefix != false) {
-            _title = customPageTitleOptions.prefix + " " + customPageTitleOptions.seprator + " " + _title;
+            _title = customPageTitleOptions.prefix + " " + customPageTitleOptions.separator + " " + _title;
             debug('new title [prefix]:' + _title);
         }
 
         if (customPageTitleOptions.suffix != '' || customPageTitleOptions.suffix != false) {
-            _title = _title + " " + customPageTitleOptions.seprator + " " + customPageTitleOptions.suffix;
+            _title = _title + " " + customPageTitleOptions.separator + " " + customPageTitleOptions.suffix;
             debug('new title [suffix]:' + _title);
         }
 
