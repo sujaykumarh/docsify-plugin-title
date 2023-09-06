@@ -30,7 +30,7 @@ Available options
 window.$docsify.customPageTitle = {
     prefix:     false,      // [optional] title prefix. default: false eg: prefix: "Application"
     suffix:     false,      // [optional] title suffix. default: false eg: suffix: "v1.0.0"
-    seprator:   '|',        // [optional] seprator for title eg: title->   prefix | title | suffix
+    separator:   '|',       // [optional] separator for title eg: title->   prefix | title | suffix
     debug:      false,      // [optional] should debug
 }
 ```
