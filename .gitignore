@@ -85,6 +85,7 @@ Temporary Items
 ## Custom config
 !.gitkeep
 .env
+./dist
 
 ## npm
 node_modules
