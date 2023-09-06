@@ -76,4 +76,4 @@ npm run minify  # generate minified .min.js in dist
 
 # 📄 License
 
-Copyright (c) 2021  [Sujay](https://github.com/sujaykumarh) Licensed under `Apache License v2.0` read [LICENSE](./LICENSE)
+Copyright (c) 2021  [Sujay H](https://github.com/sujaykumarh) Licensed under `Apache License v2.0` read [LICENSE](./LICENSE)
