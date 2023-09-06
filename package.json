@@ -1,6 +1,6 @@
 {
   "name": "@sujaykumarh/docsify-plugin-title",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Docsify plugin custom page title",
   "main": "src/plugin.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sujaykumarh/docsify-plugin-title.git"
+    "url": "git+https://github.com/sujaykumarh/docsify-plugin-title.git"
   },
   "keywords": [
     "docsify",
@@ -18,12 +18,12 @@
     "plugin",
     "custom-title"
   ],
-  "author": "Sujaykumar Hublikar <hello@sujaykumarh.com>",
+  "author": "Sujay H <hello@sujaykumarh.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Sujaykumarh/docsify-plugin-title/issues"
+    "url": "https://github.com/sujaykumarh/docsify-plugin-title/issues"
   },
-  "homepage": "https://github.com/Sujaykumarh/docsify-plugin-title#readme",
+  "homepage": "https://github.com/sujaykumarh/docsify-plugin-title#readme",
   "devDependencies": {
     "terser": "^5.7.1"
   }

@@ -17,15 +17,15 @@ jobs:
       # Pull Source Code
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       # Use nodejs
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '20.x'
 
       # Install npm packages
       - run: npm install
@@ -35,7 +35,8 @@ jobs:
       - run: sed -i -e 's/REL_VER_NUMBER/${{ env.RELEASE_VERSION }}/g' src/plugin.js
 
       # dist setup
-      - run: rm -rf dist/.git* # delete .git* files in dist
+      - run: |
+          [ ! -d ./dist ] && mkdir ./dist || echo 'dist dir already exists!'
       - run: echo ARCHIVE="docsify-plugin-title-${{ env.RELEASE_VERSION }}.zip" >> $GITHUB_ENV
       - run: mv LICENSE LICENSE.txt
 
@@ -44,7 +45,7 @@ jobs:
 
       # Publish to npm
       - name: "🚀 Publish to npm"
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"
