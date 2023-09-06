@@ -25,7 +25,7 @@ jobs:
       # Use nodejs
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '20.x'
 
       # Install npm packages
       - run: npm install
@@ -35,7 +35,8 @@ jobs:
       - run: sed -i -e 's/REL_VER_NUMBER/${{ env.RELEASE_VERSION }}/g' src/plugin.js
 
       # dist setup
-      - run: rm -rf dist/.git* # delete .git* files in dist
+      - run: |
+          [ ! -d ./dist ] && mkdir ./dist || echo 'dist dir already exists!'
       - run: echo ARCHIVE="docsify-plugin-title-${{ env.RELEASE_VERSION }}.zip" >> $GITHUB_ENV
       - run: mv LICENSE LICENSE.txt
 
