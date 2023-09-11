@@ -1,5 +1,9 @@
 # Docsify Plugin Title
 
+> [!NOTE]
+> v1.2.0 fixed typo [#40](https://github.com/sujaykumarh/docsify-plugin-title/issues/40) `seprator` in v1.x to `separator` as a breaking change was released earlier under v1.2.0 on 06-09-2023 and has since been unpublished as on 11-09-2023.
+> Please upgrade to v2.x for typo fix
+
 A simple plugin to customize [docsify](https://github.com/docsifyjs/docsify/) page title
 
 <!--[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sujaykumarh/docsify-plugin-title/Build%20&%20Publish%20package)](https://github.com/Sujaykumarh/docsify-plugin-title/actions)-->
@@ -17,7 +21,7 @@ A simple plugin to customize [docsify](https://github.com/docsifyjs/docsify/) pa
 - CDN
 
     ```html
-    <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@2.x/dist/plugin.min.js"></script>
     ```
 
 <br>
@@ -57,7 +61,7 @@ Example:
 Clone
 
 ```bash
-git clone https://github.com/Sujaykumarh/docsify-plugin-title.git
+git clone https://github.com/sujaykumarh/docsify-plugin-title.git
 ```
 
 install resources
